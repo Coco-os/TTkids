@@ -22,7 +22,7 @@ public class Kid implements User{
         return parent;
     }*/
 
-    public String getName() {
+    public String getNick() {
         return this.nick;
     }
 
@@ -42,17 +42,17 @@ public class Kid implements User{
 
     @Override
     public void watchVideo() {
-        System.out.println(getName() + " is watching "+this.chanels.getChanel(name).getVideo());
+        System.out.println(getNick() + " is watching "+this.chanels.getChanel(name).getVideo());
     }
 
     @Override
     public  void commentVideo() {
-        System.out.println(getName() + " is commenting "+this.chanels.getChanel(name).getVideo());
+        System.out.println(getNick() + " is commenting "+this.chanels.getChanel(name).getVideo());
     }
 
     @Override
     public  void likeVideo() {
-        System.out.println(getName() + " is liking "+this.chanels.getChanel(name).getVideo());
+        System.out.println(getNick() + " is liking "+this.chanels.getChanel(name).getVideo());
     }
 
     public Chanel getAccount() {
