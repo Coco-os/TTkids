@@ -3,7 +3,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Channel {
-    private List<Subscription> subscriptions;
+    private List<Subscription> memberships;
+    private List<User> subscribers;
+    private List<User> owners;
     private List<Video> videos;
 
     private String channelName;
@@ -16,26 +18,28 @@ public class Channel {
         this.description = description;
         this.startDate = startDate;
         this.category = category;
-        this.subscriptions = new ArrayList<Suscription>();
+        this.memberships = new ArrayList<Suscription>();
+        this.subscribers = new ArrayList<User>();
+        this.owners = new ArrayList<User>();
         this.videos = new ArrayList<Video>();
     }
 
 
 
     public List<Subscription> getSubscriptions() {
-        return this.subscriptions;
+        return this.memberships;
     }
 
     public Subscription getSubscription(int id) {
-        return this.subscriptions.get(id); // SE ACCEDERIA CON ID ?
+        return this.memberships.get(id); // SE ACCEDERIA CON ID ?
     }
 
     public void addSubscription(Subscription subscription) {
-        this.subscriptions.add(subscription);
+        this.memberships.add(subscription);
     }
 
     public void deleteSubscription(int id) {
-        this.subscriptions.remove(id); // CON ID ?
+        this.memberships.remove(id); // CON ID ?
     }
 
 
@@ -57,6 +61,42 @@ public class Channel {
 
     public void deleteVideo(int id) {
         this.videos.remove(id); // CON ID ?
+    }
+
+
+
+    public List<User> getSubscriptions() {
+        return this.subscribers;
+    }
+
+    public Subscription getSubscription(int id) {
+        return this.subscribers.get(id); // SE ACCEDERIA CON ID ?
+    }
+
+    public void addSubscription(Subscription subscription) {
+        this.subscribers.add(subscription);
+    }
+
+    public void deleteSubscription(int id) {
+        this.subscribers.remove(id); // CON ID ?
+    }
+
+
+
+    public List<User> getSubscriptions() {
+        return this.owners;
+    }
+
+    public Subscription getSubscription(int id) {
+        return this.owners.get(id); // SE ACCEDERIA CON ID ?
+    }
+
+    public void addSubscription(Subscription subscription) {
+        this.owners.add(subscription);
+    }
+
+    public void deleteSubscription(int id) {
+        this.owners.remove(id); // CON ID ?
     }
 
 
@@ -91,3 +131,4 @@ public class Channel {
         this.category = category;
     }
 }
+
