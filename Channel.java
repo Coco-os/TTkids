@@ -12,7 +12,7 @@ public class Channel {
     private String channelName;
     private String description;
     private final LocalDate startDate;
-    private CategoryType category; // tambien se puede hacer un enumeration
+    private CategoryType category;
 
     public Channel(String channelName, String description, LocalDate startDate, CategoryType category, Adult parent) {
         this.channelName = channelName;
@@ -32,7 +32,7 @@ public class Channel {
     }
 
     public Membership getMembership(int id) {
-        return this.memberships.get(id); // SE ACCEDERIA CON ID ?
+        return this.memberships.get(id);
     }
 
     public void addMembership(Membership subscription) {
@@ -40,10 +40,8 @@ public class Channel {
     }
 
     public void deleteMembership(int id) {
-        this.memberships.remove(id); // CON ID ?
+        this.memberships.remove(id);
     }
-
-
 
 
 
@@ -52,7 +50,7 @@ public class Channel {
     }
 
     public Video getVideo(int id) {
-        return this.videos.get(id); // SE ACCEDERIA CON ID ?
+        return this.videos.get(id);
     }
 
     public void addVideo(String title, String description, File file) {
@@ -61,7 +59,7 @@ public class Channel {
 }
 
 public void deleteVideo(int id) {
-    this.videos.remove(id); // CON ID ?
+    this.videos.remove(id);
 }
 
 
@@ -71,7 +69,7 @@ public List<User> getSubscriptions() {
 }
 
 public User getSubscriber(int id) {
-    return this.subscribers.get(id); // SE ACCEDERIA CON ID ?
+    return this.subscribers.get(id);
 }
 
 public void addSubscriber(User subscriber) {
@@ -79,7 +77,7 @@ public void addSubscriber(User subscriber) {
 }
 
 public void deleteSubscriber(int id) {
-    this.subscribers.remove(id); // CON ID ?
+    this.subscribers.remove(id);
 }
 
 

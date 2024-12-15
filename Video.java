@@ -21,7 +21,7 @@ public class Video {
     }
 
     public Challenge getChallenge(int id) {
-        return this.challenges.get(id); // SE ACCEDERIA CON ID ?
+        return this.challenges.get(id);
     }
 
     public void addChallenge(Challenge challenge) {
@@ -29,7 +29,7 @@ public class Video {
     }
 
     public void deleteChallenge(int id) {
-        this.challenges.remove(id); // CON ID ?
+        this.challenges.remove(id);
     }
 
     public String getTitle() {
