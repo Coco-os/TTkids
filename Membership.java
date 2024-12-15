@@ -2,16 +2,16 @@ import java.time.LocalDate;
 
 public class Membership {
     private User user;
-    private Canal canal;
+    private Channel channel;
     private final LocalDate beginningDate;
     private double subscriptionPrice;
     private LocalDate expirationDate;
     private Payment payment;
 
-    public Membership(User user, Canal canal, LocalDate beginningDate, LocalDate expirationDate,
+    public Membership(User user, Channel channel, LocalDate beginningDate, LocalDate expirationDate,
                                double subscriptionPrice, String paymentMethod, double paymentAmount, LocalDate paymentDate) {
         this.beginningDate = beginningDate;
-        this.canal = canal;
+        this.channel = channel;
         this.expirationDate = expirationDate;
         this.payment = new Payment(paymentAmount, paymentDate, paymentMethod);
         this.subscriptionPrice = subscriptionPrice;
@@ -22,12 +22,12 @@ public class Membership {
         return beginningDate;
     }
 
-    public Canal getCanal() {
-        return canal;
+    public Channel getCanal() {
+        return channel;
     }
 
-    public void setCanal(Canal canal) {
-        this.canal = canal;
+    public void setCanal(Channel canal) {
+        this.channel = canal;
     }
 
     public LocalDate getExpirationDate() {
