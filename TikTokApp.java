@@ -86,8 +86,17 @@ public class TikTokApp {
         return this.parents.get(id);
     }
 
+<<<<<<< HEAD
+    /*
+=======
+>>>>>>> c81f6ec442b1c71232a0c378588a3cef290c062a
     public Kid getChild(int id) {
         return this.children.get(id);
 
     }
+<<<<<<< HEAD
+
+     */
+=======
+>>>>>>> c81f6ec442b1c71232a0c378588a3cef290c062a
 }
