@@ -55,27 +55,18 @@ public class Adult implements User{
         this.memberships.add(membership);
     }
 
+
+    @Override
+    public void watchVideo(Video video){
+        System.out.println("\n---> Adult "+this.getNick()+" is watching "+video.getTitle());
+    }
+
     private void reportVideo(){
         //System.out.println(this.subscriptions.getChannel().getVideo().getName()+" is reported");
     }
 
     private void forbidVideo(){
         //System.out.println(this.chanels.getChanel(name).getVideo().getName()+" is forbidden");
-    }
-
-    @Override
-    public void watchVideo() {
-        //System.out.println(getNick()+" is watching "+this.chanels.getChanel(name).getVideo().getName());
-    }
-
-    @Override
-    public void commentVideo() {
-        //System.out.println(getNick()+" is commenting "+this.chanels.getChanel(name).getVideo().getName());
-    }
-
-    @Override
-    public void likeVideo() {
-        //System.out.println(getNick()+" is liking "+this.chanels.getChanel(name).getVideo().getName());
     }
 
     public Channel getAccount() {

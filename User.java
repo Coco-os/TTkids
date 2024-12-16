@@ -2,7 +2,7 @@
 
 public interface User {
 
-    default void watchVideo(){}
+    default void watchVideo(Video video){}
 
     default void commentVideo(){}
 

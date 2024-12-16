@@ -9,13 +9,13 @@ public class Kid implements User{
     private String nick;
     private String email;
     private Channel account;
-    private List<Channel> channels;
+    private List<Channel> subscriptions;
 
     public Kid(String nick, String email) {
         this.nick = nick;
         this.email = email;
         this.account = null;
-        this.channels = new ArrayList<Channel>();
+        this.subscriptions = new ArrayList<Channel>();
     }
 
     /*public Parent getParent() {
@@ -38,23 +38,25 @@ public class Kid implements User{
         this.email = email;
     }
 
+    public Channel getAccount() {
+        return account;
+    }
 
+    public void setAccount(Channel account) {
+        this.account = account;
+    }
 
-    @Override
-    public void watchVideo() {
-        //System.out.println(getNick() + " is watching "+this.channels.getChannel().getVideo());
+    public List<Channel> getSubscriptions() {
+        return this.subscriptions;
+    }
+
+    public void addSubscription(Channel subscription) {
+        this.subscriptions.add(subscription);
     }
 
     @Override
-    public  void commentVideo() {
-        //System.out.println(getNick() + " is commenting "+this.channels.getChanel().getVideo());
+    public void watchVideo(Video video){
+        System.out.println("\n---> Child "+this.getNick()+" is watching "+video.getTitle());
     }
-
-    @Override
-    public  void likeVideo() {
-        //System.out.println(getNick() + " is liking "+this.channels.getChanel().getVideo());
-    }
-
-
 
 }
